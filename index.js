@@ -13,6 +13,17 @@ memeModalCloseBtn.addEventListener('click', closeModal)
 
 getImageBtn.addEventListener('click', renderCat)
 
+// memeModal.addEventListener('click', (event) => {
+//     //if(!(event.target.id === "meme-modal")) closeModal();
+//     const isOutside = !event.target.closest('#meme-modal');
+//     console.log(isOutside);
+//     if (isOutside) closeModal();
+// });
+
+window.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeModal();
+});
+
 function highlightCheckedOption(e){
     const radios = document.getElementsByClassName('radio')
     for (let radio of radios){
