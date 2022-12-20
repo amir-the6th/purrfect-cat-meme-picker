@@ -7,6 +7,8 @@ const memeModalInner = document.getElementById('meme-modal-inner')
 const memeModal = document.getElementById('meme-modal')
 const memeModalCloseBtn = document.getElementById('meme-modal-close-btn')
 
+
+
 emotionRadios.addEventListener('change', highlightCheckedOption)
 
 memeModalCloseBtn.addEventListener('click', closeModal)
@@ -20,9 +22,7 @@ getImageBtn.addEventListener('click', renderCat)
 //     if (isOutside) closeModal();
 // });
 
-window.addEventListener('keydown', event => {
-    if (event.key === 'Escape') closeModal();
-});
+
 
 function highlightCheckedOption(e){
     const radios = document.getElementsByClassName('radio')
